@@ -1,0 +1,11 @@
+@import "_base(v1)";
+h2 {
+    letter-spacing: 3px;
+    line-height: 60px;
+}
+header{
+	margin: 0;
+}
+@import "comp/_header";
+@import "comp/_promo";
+@import"_media";

@@ -1,0 +1,145 @@
+//Размер шрифта всей страницы (16px-1rem)
+$htmlFontSize: 100%;
+$bdMaxWidth: 1920px;
+//Ширина контейнера
+$containerMaxWidth: 1305px;
+$containerMinWidth: 375px;
+//Цвет фона
+$bgColor: #210E09;
+//Найстройки заголовков
+$hFont : 'GothamPro', sans-serif;
+$hColor: #fff;
+$h1Weight : 900;
+$h2Weight : 900;
+$h3Weight : 700;
+$h1Size: 40rem/16;
+$h2Size: 40rem/16;
+$h3Size: 14rem/16;
+//Настройки параграфа
+$paraFont: 'Stolzl',sans-serif;
+$paraColor: #fff;
+$paraWeight: 400;
+$paraSize: 0.8rem;
+//Настройка отступов
+$sectionMargin:  0;
+$sectionPadding: 0;
+
+@mixin bgProperty (){
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	box-sizing: border-box;
+}
+
+html,body {
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+html {
+	font-size: $htmlFontSize;
+}
+body {
+	background: $bgColor;
+	font-family: $paraFont;
+	max-width: $bdMaxWidth;
+}
+
+//Если есть локальные шрифты
+@font-face {
+	font-family: 'Stolzl';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Stolzl'),
+		 url(../fonts/stolzl_regular.otf);
+}
+@font-face {
+	font-family: 'GothamPro';
+	font-style: normal;
+	font-weight: 700;
+	src: local('GothamPro'),
+		 url(../fonts/gothampro_bold.ttf);
+}
+@font-face {
+	font-family: 'GothamPro';
+	font-style: normal;
+	font-weight: 900;
+	src: local('GothamPro'),
+		 url(../fonts/gothampro_black.ttf);
+}
+
+.container {
+	max-width: $containerMaxWidth;
+	min-width: $containerMinWidth;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 10px;
+	box-sizing: border-box;
+}
+
+section {
+	margin: $sectionMargin;
+	padding: $sectionPadding;
+}
+
+img{vertical-align: top;}
+
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display: none;}
+
+h1 {font-size: $h1Size;font-weight: $h1Weight;}
+h2 {font-size: $h2Size;font-weight: $h2Weight;}
+h3 {font-size: $h3Size;font-weight: $h3Weight;}
+
+h1,h2,h3 {
+	color: $hColor;
+	font-family: $hFont;
+}
+
+ul {
+	list-style-type: none;
+}
+
+p {
+	font-weight: $paraWeight;
+	font-size: $paraSize;
+	color: $paraColor;
+}
+
+a, a:visited{
+	color: #fff;
+	text-decoration: none;
+	font-family: 'Stolzl';
+	font-weight: 400;
+	font-size: 14px;
+}
+a:hover{text-decoration: none;}
+a:focus,a:active{outline: none;}
+
+button {
+	outline: none;
+	border: none;
+	background: none;
+	color: #fff;
+	font-family: 'Stolzl';
+	font-size: 14px;
+	cursor: pointer;
+	&:hover {
+		color: rgba(0,0,0,.7);
+		transition: all .2s ease;
+	}
+	&::-moz-focus-inner {padding:0;border:0;}
+	&:focus,:active{outline: none;}
+}
+
+
+
