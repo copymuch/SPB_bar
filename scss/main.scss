@@ -3,9 +3,21 @@ h2 {
     letter-spacing: 3px;
     line-height: 60px;
 }
+h2,h3 {
+    text-transform: uppercase;
+}
+h4 {font-size: 0.9rem;}
+
 header{
 	margin: 0;
 }
+
+.bttn-def {
+    border: 2px solid #D5621D;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
 @import "comp/_header";
 @import "comp/_promo";
+@import "comp/_menu";
 @import"_media";

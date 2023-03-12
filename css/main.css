@@ -28,7 +28,7 @@ body {
   font-family: "Stolzl";
   font-style: normal;
   font-weight: 400;
-  src: local("Stolzl"), url(../fonts/stolzl_regular.otf);
+  src: local("Stolzl"), url(../fonts/stolzl_regular.ttf);
 }
 @font-face {
   font-family: "GothamPro";
@@ -79,7 +79,7 @@ h2 {
 }
 
 h3 {
-  font-size: 0.875rem;
+  font-size: 1.125rem;
   font-weight: 700;
 }
 
@@ -94,14 +94,14 @@ ul {
 
 p {
   font-weight: 400;
-  font-size: 0.8rem;
+  font-size: 0.875rem;
   color: #fff;
 }
 
 a, a:visited {
   color: #fff;
   text-decoration: none;
-  font-family: "Stolzl";
+  font-family: "Stolzl", sans-serif;
   font-weight: 400;
   font-size: 14px;
 }
@@ -119,12 +119,12 @@ button {
   border: none;
   background: none;
   color: #fff;
-  font-family: "Stolzl";
   font-size: 14px;
   cursor: pointer;
 }
 button:hover {
   color: rgba(0, 0, 0, 0.7);
+  background: #D5621D;
   transition: all 0.2s ease;
 }
 button::-moz-focus-inner {
@@ -140,8 +140,22 @@ h2 {
   line-height: 60px;
 }
 
+h2, h3 {
+  text-transform: uppercase;
+}
+
+h4 {
+  font-size: 0.9rem;
+}
+
 header {
   margin: 0;
+}
+
+.bttn-def {
+  border: 2px solid #D5621D;
+  border-radius: 5px;
+  text-transform: uppercase;
 }
 
 .header {
@@ -159,6 +173,10 @@ header {
   display: flex;
   gap: 10px 30px;
 }
+.header__bar a:hover {
+  transition: all 0.2s ease;
+  color: #D5621D;
+}
 
 .header__other {
   display: flex;
@@ -170,10 +188,8 @@ header {
 }
 
 .header__bttn button {
-  border: 2px solid #D5621D;
+  font-family: "Stolzl", sans-serif;
   padding: 15px 30px;
-  border-radius: 5px;
-  text-transform: uppercase;
 }
 
 .promo {
@@ -202,13 +218,16 @@ header {
 }
 .promo__main p {
   font-family: "GothamPro";
-  text-align: center;
   box-sizing: border-box;
   width: 22%;
   font-size: 18px;
+}
+
+.whiteBg {
   font-weight: 700;
   text-transform: uppercase;
   color: #000;
+  text-align: center;
   background: #fff;
   padding: 15px 20px 12px 20px;
   border-radius: 5px;
@@ -232,6 +251,12 @@ header {
 .aside__title h3 {
   padding: 12px;
   text-transform: uppercase;
+  font-size: 0.875rem;
+}
+.aside__title h3:hover {
+  transition: all 0.2s ease;
+  color: #D5621D;
+  cursor: pointer;
 }
 .aside__title div {
   text-align: center;
@@ -254,11 +279,81 @@ header {
   justify-content: center;
 }
 
-.arrow {
+.promo__arrow {
   display: none;
   position: absolute;
   right: 10px;
   padding: 0 10px;
+}
+
+.menu {
+  margin-top: 120px;
+  margin-bottom: 150px;
+}
+
+.orange {
+  color: #D5621D;
+}
+
+.menu__title {
+  text-align: center;
+}
+.menu__title h4 {
+  margin-bottom: 40px;
+}
+
+.menu__main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu__cards {
+  display: flex;
+  margin: 80px 60px 96px 60px;
+  gap: 56px 10px;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.menu__card {
+  display: flex;
+  max-width: 44%;
+  align-items: center;
+}
+
+.card__text-content {
+  padding-left: 25px;
+}
+
+.card__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card__title button {
+  padding: 12px 20px 9px 20px;
+  font-family: "GothamPro", sans-serif;
+}
+
+.card__info {
+  padding-top: 10px;
+}
+
+.menu__arrow {
+  padding: 15px 15px 13px 15px;
+  background: #D5621D;
+  border-radius: 5px;
+}
+
+.menu__bttn {
+  text-align: center;
+}
+.menu__bttn button {
+  font-family: "GothamPro", sans-serif;
+  padding: 15px 30px;
+  background: #D5621D;
 }
 
 @media (max-width: 1225px) {
@@ -270,11 +365,17 @@ header {
   }
 }
 @media (max-width: 1131px) {
-  .arrow {
+  .promo__arrow {
     display: block;
   }
-  .cover_3, .cover_4 {
+  .cover-3, .cover-4 {
     display: none;
+  }
+}
+@media (max-width: 1062px) {
+  .menu__card {
+    max-width: 100%;
+    margin: 0 auto;
   }
 }
 @media (max-width: 992px) {
@@ -414,10 +515,24 @@ header {
     width: 45%;
     text-align: center;
   }
-  .cover_3, .cover_4 {
+  .cover-3, .cover-4 {
     display: block;
   }
-  .arrow {
+  .promo__arrow {
+    display: none;
+  }
+}
+@media (max-width: 592px) {
+  .menu__card {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .card__text-content {
+    padding-left: 0;
+    margin-top: 20px;
+  }
+  .card-4, .card-5, .card-6, .card-7 {
     display: none;
   }
 }
@@ -433,5 +548,15 @@ header {
   .main__text-content {
     margin-left: 10px;
     margin-right: 10px;
+  }
+}
+@media (max-width: 480px) {
+  .card__title {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .card__title button {
+    width: 100%;
+    margin: 10px 0;
   }
 }

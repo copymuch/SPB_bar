@@ -14,12 +14,12 @@ $h2Weight : 900;
 $h3Weight : 700;
 $h1Size: 40rem/16;
 $h2Size: 40rem/16;
-$h3Size: 14rem/16;
+$h3Size: 18rem/16;
 //Настройки параграфа
 $paraFont: 'Stolzl',sans-serif;
 $paraColor: #fff;
 $paraWeight: 400;
-$paraSize: 0.8rem;
+$paraSize: 0.875rem;
 //Настройка отступов
 $sectionMargin:  0;
 $sectionPadding: 0;
@@ -60,7 +60,7 @@ body {
 	font-style: normal;
 	font-weight: 400;
 	src: local('Stolzl'),
-		 url(../fonts/stolzl_regular.otf);
+		 url(../fonts/stolzl_regular.ttf);
 }
 @font-face {
 	font-family: 'GothamPro';
@@ -118,7 +118,7 @@ p {
 a, a:visited{
 	color: #fff;
 	text-decoration: none;
-	font-family: 'Stolzl';
+	font-family: $paraFont;
 	font-weight: 400;
 	font-size: 14px;
 }
@@ -130,11 +130,11 @@ button {
 	border: none;
 	background: none;
 	color: #fff;
-	font-family: 'Stolzl';
 	font-size: 14px;
 	cursor: pointer;
 	&:hover {
 		color: rgba(0,0,0,.7);
+		background: #D5621D;
 		transition: all .2s ease;
 	}
 	&::-moz-focus-inner {padding:0;border:0;}
