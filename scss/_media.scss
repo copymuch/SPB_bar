@@ -10,6 +10,18 @@
     }
  }
 }
+@media (max-width:1194px){
+    .info__container {
+        flex-direction: column;
+    }
+    .info__events,.info__tour {
+        max-width: 80%;
+    }
+    .info__tour {
+        margin-top: 15px;
+    }
+}
+
 @media (max-width:1131px){
     .promo__arrow {
         display: block;
@@ -138,5 +150,11 @@
             width: 100%;
             margin: 10px 0;
         }
+    }
+    .info__img img{
+        max-width: 100%;
+    }
+    .info__tour,.info__events {
+        max-width: 100%;
     }
 }
