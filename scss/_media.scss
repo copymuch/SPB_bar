@@ -9,6 +9,9 @@
         width: 30%;
     }
  }
+ .contacts__map {
+    max-width: 59%;
+}
 }
 @media (max-width:1194px){
     .info__container {
@@ -29,12 +32,16 @@
     .cover-3,.cover-4 {
         display: none;
     }
+    
 }
 
 @media (max-width:1062px) {
     .menu__card  {
         max-width: 100%;
         margin: 0 auto;
+    }
+    .contacts__map {
+        max-width: 100%;
     }
 }
 
@@ -56,6 +63,9 @@
     }
     .rider__engineers {
         width: 45%;
+    }
+    .contacts__info {
+        max-width: 35%;
     }
 }
 
@@ -79,6 +89,12 @@
     .rider__engineers {
         margin-top: 40px;
         width: 100%;
+    }
+    .contacts__main {
+        flex-wrap: wrap;
+    }
+    .contacts__info{
+        max-width: 100%;
     }
 }
 

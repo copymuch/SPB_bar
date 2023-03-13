@@ -451,12 +451,67 @@ h4 {
   padding: 13px 11px 10px 11px;
 }
 
+.contacts {
+  margin: 150px 0;
+}
+
+.contacts__main {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 45px;
+}
+
+.contacts__info {
+  max-width: 30%;
+  border: 2px solid #D5621D;
+  border-radius: 5px;
+  padding: 2.5rem;
+  background: rgba(213, 98, 29, 0.1);
+}
+.contacts__info p {
+  padding: 20px 0 35px 0;
+}
+.contacts__info p:last-of-type {
+  padding: 20px 0 0 0;
+}
+
+.separator {
+  background: #fff;
+  height: 1px;
+  margin-bottom: 35px;
+}
+
+.contacts__map {
+  max-width: 55%;
+}
+.contacts__map img {
+  max-width: 100%;
+}
+
+.footer {
+  margin-top: 100px 0;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #fff;
+  padding: 30px 0;
+  opacity: 0.5;
+}
+
 @media (max-width: 1225px) {
   .promo__main h2 {
     max-width: 100%;
   }
   .promo__main p {
     width: 30%;
+  }
+  .contacts__map {
+    max-width: 59%;
   }
 }
 @media (max-width: 1194px) {
@@ -483,6 +538,9 @@ h4 {
     max-width: 100%;
     margin: 0 auto;
   }
+  .contacts__map {
+    max-width: 100%;
+  }
 }
 @media (max-width: 992px) {
   html {
@@ -504,6 +562,9 @@ h4 {
   .rider__engineers {
     width: 45%;
   }
+  .contacts__info {
+    max-width: 35%;
+  }
 }
 @media (max-width: 910px) {
   .promo__main p {
@@ -523,6 +584,12 @@ h4 {
   .rider__engineers {
     margin-top: 40px;
     width: 100%;
+  }
+  .contacts__main {
+    flex-wrap: wrap;
+  }
+  .contacts__info {
+    max-width: 100%;
   }
 }
 @media (max-width: 820px) {
