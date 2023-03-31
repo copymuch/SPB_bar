@@ -1,0 +1,115 @@
+.pop-up {
+    width: 440px;
+    left:50%;
+    transform:translate(-50%, -50%);
+    z-index: 3;
+    position: fixed;
+    padding: 35px;
+    top: -100%;
+    background: linear-gradient(#2a120a 65%, #fff 35%);
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 10px 10px 10px rgba(0,0,0,.5);
+    transition: all 0.5s ease;
+    box-sizing: border-box;
+    h2 {
+        font-size: 2rem;
+        color: #fff;
+        line-height: 1.5;
+        text-align: left;}
+    p {
+        text-align: right;
+        color: #fff;
+        padding: 0px ;
+    }
+    &.active {
+        display: block;
+        top: 50%;
+    }
+}
+
+.close-div {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 30px 0 0;
+}
+.close-bttn {
+    cursor: pointer;
+    .close-span,&::after {
+        display: block;
+        position: absolute;
+        height: 3px;
+        background: #000;
+        width: 40px;
+        border-radius: 5px;
+        background: rgba(224, 1, 1,1);
+        transform: rotate(50deg);
+        content: '';
+    }
+    &:after {
+        transform: rotate(-50deg);
+
+    }
+    &:hover {
+        .close-span,&::after {
+        box-shadow: 0px 0px 5px rgba(224, 1, 1,1);
+        }
+    }
+}
+
+
+.pop-up__bttn {
+    margin-top: 50px;
+    button {
+        color: #fff;
+        padding: 10px 12px;
+        &:hover {
+            color: #000;
+        }
+    }
+}
+
+.pop-up__border {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    height: 5px;
+    margin:50px 0;
+    padding: 0;
+    border-radius: 5px;
+}
+.border{
+    width: 20%;
+    background: black;
+    content: '';
+}
+
+.pop-up__hatch {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    height: 100px;
+
+}
+
+.hatch-line {
+    width: 1%;
+    &:nth-child(2n) {
+        height: 50px;
+    }
+    background:#000;
+    content: '';
+}
+
+.fullpage {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: none;
+    top: 0;
+    z-index: 2;
+    content: '';
+    background: rgba(0,0,0,.3);
+    &.active {
+        display: block;
+    }}

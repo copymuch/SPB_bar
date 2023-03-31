@@ -140,6 +140,14 @@ h2 {
   line-height: 60px;
 }
 
+.fixed-page {
+  overflow: hidden;
+}
+
+.blackout {
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
 h2, h3 {
   text-transform: uppercase;
 }
@@ -274,6 +282,11 @@ h4 {
   background: rgba(213, 98, 29, 0.05);
 }
 
+.aside-bttn:hover {
+  color: #D5621D;
+  background: none;
+}
+
 .aside__covers {
   display: flex;
   background: rgba(213, 98, 29, 0.07);
@@ -290,6 +303,121 @@ h4 {
   position: absolute;
   right: 10px;
   padding: 0 10px;
+}
+
+.pop-up {
+  width: 440px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  position: fixed;
+  padding: 35px;
+  top: -100%;
+  background: linear-gradient(#2a120a 65%, #fff 35%);
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+  transition: all 0.5s ease;
+  box-sizing: border-box;
+}
+.pop-up h2 {
+  font-size: 2rem;
+  color: #fff;
+  line-height: 1.5;
+  text-align: left;
+}
+.pop-up p {
+  text-align: right;
+  color: #fff;
+  padding: 0px;
+}
+.pop-up.active {
+  display: block;
+  top: 50%;
+}
+
+.close-div {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 30px 0 0;
+}
+
+.close-bttn {
+  cursor: pointer;
+}
+.close-bttn .close-span, .close-bttn::after {
+  display: block;
+  position: absolute;
+  height: 3px;
+  background: #000;
+  width: 40px;
+  border-radius: 5px;
+  background: rgb(224, 1, 1);
+  transform: rotate(50deg);
+  content: "";
+}
+.close-bttn:after {
+  transform: rotate(-50deg);
+}
+.close-bttn:hover .close-span, .close-bttn:hover::after {
+  box-shadow: 0px 0px 5px rgb(224, 1, 1);
+}
+
+.pop-up__bttn {
+  margin-top: 50px;
+}
+.pop-up__bttn button {
+  color: #fff;
+  padding: 10px 12px;
+}
+.pop-up__bttn button:hover {
+  color: #000;
+}
+
+.pop-up__border {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  height: 5px;
+  margin: 50px 0;
+  padding: 0;
+  border-radius: 5px;
+}
+
+.border {
+  width: 20%;
+  background: black;
+  content: "";
+}
+
+.pop-up__hatch {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  height: 100px;
+}
+
+.hatch-line {
+  width: 1%;
+  background: #000;
+  content: "";
+}
+.hatch-line:nth-child(2n) {
+  height: 50px;
+}
+
+.fullpage {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: none;
+  top: 0;
+  z-index: 2;
+  content: "";
+  background: rgba(0, 0, 0, 0.3);
+}
+.fullpage.active {
+  display: block;
 }
 
 .menu {

@@ -34,6 +34,7 @@
     max-width: 33%;
     border-radius: 5px;
 }
+
 .aside__title {
     display: flex;
     text-align: center;
@@ -54,6 +55,12 @@
         &:last-of-type {
             background: rgba(213, 98, 29, 0.05);
         }
+    }
+}
+.aside-bttn {
+    &:hover {
+        color: #D5621D;
+        background: none;
     }
 }
 .aside__covers {

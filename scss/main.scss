@@ -3,6 +3,12 @@ h2 {
     letter-spacing: 3px;
     line-height: 60px;
 }
+.fixed-page {overflow: hidden;}
+.blackout {
+    box-shadow: 10px 10px 10px rgba(0,0,0,.5);
+    
+}
+
 h2,h3 {
     text-transform: uppercase;
 }
@@ -31,6 +37,7 @@ h4 {font-size: 0.9rem;}
 }
 @import "comp/_header";
 @import "comp/_promo";
+@import "comp/_pop-up";
 @import "comp/_menu";
 @import "comp/_info";
 @import "comp/_rider";

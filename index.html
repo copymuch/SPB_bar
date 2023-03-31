@@ -30,7 +30,7 @@
                 </nav>
             </div>
             <div class="header__bttn">
-                <button type="submit" class="bttn-def">Бронирование</button>
+                <button type="submit" class="bttn-def reserv-bttn">Бронирование</button>
             </div>
             <div class="header__other">
                 <div class="ticket">
@@ -53,11 +53,15 @@
                 </section>
                 <aside class="promo__aside">
                     <div class="aside__title">
-                        <div>
-                            <h3>Ближайшие</h3>
+                        <div class="div1">
+                            <h3>
+                                <button class="aside-bttn" id="b1">Ближайшие</button>
+                            </h3>
                         </div>
-                        <div>
-                            <h3>Скоро</h3>
+                        <div class="div2">
+                            <h3>
+                                <button class="aside-bttn" id="b2">Скоро</button>
+                            </h3>
                         </div>
                     </div>
                     <div class="aside__covers">
@@ -81,6 +85,38 @@
                 </aside>
             </div>
         </section>
+        <div class="pop-up">
+            <div class = "pop-up__container container">
+                <div class="close-div">
+                    <button class="close-bttn">
+                        <span class="close-span"></span>
+                    </button>
+                </div>
+                <div class="pop-up__title title">
+                    <h2>Забронировать билет</h2>
+                </div>
+                <p>Ближайшая дата : 13.07.26</p>
+                <div class="pop-up__bttn">
+                    <button class="bttn-def">Выбрать дату</button>
+                </div>
+                <div class="pop-up__border">
+                    <div class="border border-1"></div>
+                    <div class="border border-2"></div>
+                    <div class="border border-3"></div>
+                </div>
+                <div class="pop-up__hatch">
+                    <div class="hatch-line"></div>
+                    <div class="hatch-line"></div>
+                    <div class="hatch-line"></div>
+                    <div class="hatch-line"></div>
+                    <div class="hatch-line"></div>
+                    <div class="hatch-line"></div>
+                </div>
+            </div>
+        </div>
+        <div class="fullpage">
+
+        </div>
         <section class="menu">
             <div class="menu__container container">
                 <div class="menu__title title">
@@ -406,6 +442,7 @@
                 </div>
             </div>
         </section>
+
     </main>
     <footer class="footer"> 
         <div class = "footer__container container">
@@ -418,7 +455,10 @@
             </div>
         </div>
     </footer>
+    <script src="js/script.js"></script>
     <script src="js/burger.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="js/effects.js"></script>
 </body>
 
 </html>
