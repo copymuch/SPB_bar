@@ -3,7 +3,7 @@ let block = document.querySelector('.aside__covers');
 let div1 = document.querySelector('.div1');
 let div2 = document.querySelector('.div2');
 let covers = document.querySelectorAll('.cover img');
-let reservBttn = document.querySelector('.reserv-bttn');
+let reservBttns = document.querySelectorAll('.reserv-bttn');
 
 
 let closeBttn = document.querySelector('.close-bttn');
@@ -35,9 +35,10 @@ closeBttn.onclick = function() {
     popUp.classList.toggle('active');
 }
 
-
-reservBttn.onclick = function() {
-    body.classList.toggle('fixed-page');
-    popUpBg.classList.toggle('active');
-    popUp.classList.toggle('active');
-}
+reservBttns.forEach((reservBttn)=> {
+    reservBttn.onclick = function() {
+        body.classList.toggle('fixed-page');
+        popUpBg.classList.toggle('active');
+        popUp.classList.toggle('active');
+    }
+})
