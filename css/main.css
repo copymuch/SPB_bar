@@ -28,7 +28,7 @@ body {
   font-family: "Stolzl";
   font-style: normal;
   font-weight: 400;
-  src: local("Stolzl"), url(../fonts/stolzl_regular.ttf);
+  src: local("Stolzl"), url(../fonts/stolzl_regular.otf);
 }
 @font-face {
   font-family: "GothamPro";
@@ -184,6 +184,17 @@ h4 {
   padding: 40px 0 35px 0;
 }
 
+.after-bttn::before {
+  background: url(../img/icons/ticket.svg) no-repeat;
+  background-size: contain;
+  height: 250px;
+  width: 100%;
+  top: 10px;
+  left: -50px;
+  content: "";
+  position: absolute;
+}
+
 .header {
   margin: 30px 0 0 0;
 }
@@ -207,9 +218,11 @@ h4 {
 .header__other {
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .ticket {
+  pointer-events: none;
   max-width: 55%;
 }
 
@@ -229,13 +242,16 @@ h4 {
 }
 
 .promo__main {
-  background: url(../../img/promo_img.png);
+  background: url(../img/promo_img.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   max-width: 90%;
   height: 540px;
+  position: relative;
   border-radius: 5px;
+  animation: fade 0.2s ease;
+  animation: slideLeft 1s ease;
 }
 .promo__main h2 {
   max-width: 70%;
@@ -244,19 +260,24 @@ h4 {
 .promo__main p {
   font-family: "GothamPro";
   box-sizing: border-box;
-  width: 22%;
+  display: flex;
   font-size: 18px;
+  border: 1px solid #000;
 }
 
 .main__text-content {
   margin-top: 301px;
   margin-left: 60px;
   margin-right: 60px;
+  position: relative;
+  animation: slideLeft 1.5s ease;
 }
 
 .promo__aside {
   max-width: 33%;
   border-radius: 5px;
+  position: relative;
+  animation: slideRight 1s ease;
 }
 
 .aside__title {
@@ -433,6 +454,7 @@ h4 {
 
 .menu__cards {
   display: flex;
+  position: relative;
   margin: 80px 60px 96px 60px;
   gap: 56px 10px;
   flex-wrap: wrap;
@@ -491,6 +513,7 @@ h4 {
 }
 
 .info__events, .info__tour {
+  position: relative;
   text-align: center;
   max-width: 25%;
   margin: 0 auto;
@@ -629,6 +652,54 @@ h4 {
   border-top: 1px solid #fff;
   padding: 30px 0;
   opacity: 0.5;
+}
+
+.developers {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.fade {
+  animation: fade 1s ease;
+}
+@keyframes textTrans {
+  from {
+    letter-spacing: -5px;
+  }
+  to {
+    letter-spacing: 0px;
+  }
+}
+@keyframes slideLeft {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0;
+  }
+}
+@keyframes slideRight {
+  from {
+    right: -100%;
+  }
+  to {
+    right: 0;
+  }
+}
+.slideLeft {
+  animation: slideLeft 1s ease;
+}
+
+.slideRight {
+  animation: slideRight 1s ease;
 }
 
 @media (max-width: 1225px) {
@@ -861,6 +932,11 @@ h4 {
   }
   .card-4, .card-5, .card-6, .card-7 {
     display: none;
+  }
+  .footer__container {
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
   }
 }
 @media (max-width: 531px) {

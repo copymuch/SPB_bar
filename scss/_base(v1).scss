@@ -60,7 +60,7 @@ body {
 	font-style: normal;
 	font-weight: 400;
 	src: local('Stolzl'),
-		 url(../fonts/stolzl_regular.ttf);
+		 url(../fonts/stolzl_regular.otf);
 }
 @font-face {
 	font-family: 'GothamPro';
@@ -140,6 +140,3 @@ button {
 	&::-moz-focus-inner {padding:0;border:0;}
 	&:focus,:active{outline: none;}
 }
-
-
-

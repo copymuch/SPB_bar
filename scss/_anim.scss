@@ -1,0 +1,84 @@
+@-webkit-keyframes fade {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fade {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.fade {
+    -webkit-animation: fade 1s ease;
+            animation: fade 1s ease;
+}
+
+@-webkit-keyframes textTrans {
+	from {
+		letter-spacing: 0px;
+	}
+	to {
+		letter-spacing: 1.5px;
+	}
+}
+
+@keyframes textTrans {
+	from {
+		letter-spacing: -5px;
+	}
+	to {
+		letter-spacing: 0px;
+	}
+}
+
+@-webkit-keyframes slideLeft {
+	from {
+		left: -100%;
+	}
+	to {
+		left: 0;
+	}
+}
+
+@keyframes slideLeft {
+	from {
+		left: -100%;
+	}
+	to {
+		left: 0;
+	}
+}
+
+@-webkit-keyframes slideRight {
+	from {
+		right: -100%;
+	}
+	to {
+		right: 0;
+	}
+}
+
+@keyframes slideRight {
+	from {
+		right: -100%;
+	}
+	to {
+		right: 0;
+	}
+}
+.slideLeft {
+    -webkit-animation: slideLeft 1s ease;
+            animation: slideLeft 1s ease;
+}
+.slideRight {
+    -webkit-animation: slideRight 1s ease;
+            animation: slideRight 1s ease;
+}

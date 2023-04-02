@@ -21,8 +21,10 @@
 .header__other {
     display: flex;
     align-items: center;
+    position: relative;
 }
 .ticket {
+    pointer-events: none;
     max-width: 55%;
 }
 .header__bttn {

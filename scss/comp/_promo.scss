@@ -7,11 +7,16 @@
     gap: 24px;
 }
 .promo__main {
-    background: url(../../img/promo_img.png);
+    background: url(../img/promo_img.png);
     @include bgProperty;
     max-width: 90%;
     height: 540px;
+    position: relative;
     border-radius: 5px;
+    -webkit-animation: fade 0.2s ease;
+            animation: fade 0.2s ease;
+            -webkit-animation: slideLeft 1s ease;
+                    animation: slideLeft 1s ease;
     h2 {
         max-width: 70%;
         margin: 30px 0 45px 0;
@@ -19,8 +24,9 @@
     p {
         font-family: 'GothamPro';
         box-sizing: border-box;
-        width: 22%;
+        display: flex;
         font-size: 18px;
+        border: 1px solid #000;
     }
 }
 
@@ -28,11 +34,17 @@
     margin-top: 301px;
     margin-left: 60px;
     margin-right: 60px;
+    position: relative;
+    -webkit-animation: slideLeft 1.5s ease;
+            animation: slideLeft 1.5s ease;
 }
 
 .promo__aside {
     max-width: 33%;
     border-radius: 5px;
+    position: relative;
+    -webkit-animation: slideRight 1s ease;
+            animation: slideRight 1s ease;
 }
 
 .aside__title {

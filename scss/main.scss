@@ -35,6 +35,17 @@ h4 {font-size: 0.9rem;}
         padding: 40px 0 35px 0;
     }
 }
+
+.after-bttn::before {
+    background: url(../img/icons/ticket.svg) no-repeat;
+    background-size: contain;
+    height: 250px;
+    width: 100%;
+    top: 10px;
+    left: -50px;
+    content: '';
+    position: absolute;
+}
 @import "comp/_header";
 @import "comp/_promo";
 @import "comp/_pop-up";
@@ -43,4 +54,5 @@ h4 {font-size: 0.9rem;}
 @import "comp/_rider";
 @import "comp/_contacts";
 @import "comp/_footer";
+@import "_anim";
 @import"_media";
