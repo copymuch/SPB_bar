@@ -23,8 +23,30 @@
     display: flex;
     background: rgba(213, 98, 29, 0.1);
     padding: 20px 40px 18px 40px;
+    position: relative;
     justify-content: space-between;
     border-radius: 5px;
+    transition: all .5s ease;
+    &.active {
+        padding-bottom: 150px;
+    }
+}
+.arrow {
+    transition: all .5s ease;
+}
+.equip__text-content {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-animation: fade 0.5s;
+            animation: fade 0.5s;
+    transform:translate(-50%, -30%);
+    transition: all .5s ease;
+    width: 80%;
+    &.active {
+        display: flex;
+    }
 }
 .rider__engineers {
     width: 45%;
